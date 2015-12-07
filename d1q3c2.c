@@ -44,16 +44,16 @@ void DataToFile() {                                 // Routine to output data
 void theory() {                                      // This will output theoretical values if desired.
   double ntot=n[0][0]+n[1][0], ptot=n[0][0]*u[0][0]+n[1][0]*u[1][0];
   double ubar=(n[0][0]*u0[0]+n[1][0]*u0[1])/(n[0][0]+n[1][0]);
-  //for (int i=0; i<C; i++) th[i]=ubar+(u0[i]-ubar)*exp(-Fric*(n[0][0]+n[1][0])*iterations); //Exact solution
+  //for (int i=0; i<C; i++) th[i]=ubar+(u0[i]-ubar)*exp(-Fric*(n[0][0]+n[1][0])*iterations); //Analyitc continuous solution
   /*if (iterations==0) {
     th[0]=uprev[0];
     th[1]=uprev[1];
   } else {
-    th[0]=Fric*n[1][0]*(u[1][0]-u[0][0])+uprev[0];  //Finite difference solutions
+    th[0]=Fric*n[1][0]*(u[1][0]-u[0][0])+uprev[0];  //Finite difference approximation
     th[1]=Fric*n[0][0]*(u[0][0]-u[1][0])+uprev[1];
   }*/
   th[0]=(n[1][0]*u[1][0])/n[0][0]+(ptot*(n[0][0]-n[1][0])-ptot*(n[0][0]-n[1][0])*pow(1-Fric*ntot,iterations)+(n0[0]*u0[0]-n0[1]*u0[1])*pow(1-Fric*ntot,iterations))/(ntot*n[0][0]);
-  th[1]=(n[0][0]*u[0][0])/n[1][0]+(ptot*(n[1][0]-n[0][0])-ptot*(n[1][0]-n[0][0])*pow(1-Fric*ntot,iterations)+(n0[1]*u0[1]-n0[0]*u0[0])*pow(1-Fric*ntot,iterations))/(ntot*n[1][0]);
+  th[1]=(n[0][0]*u[0][0])/n[1][0]+(ptot*(n[1][0]-n[0][0])-ptot*(n[1][0]-n[0][0])*pow(1-Fric*ntot,iterations)+(n0[1]*u0[1]-n0[0]*u0[0])*pow(1-Fric*ntot,iterations))/(ntot*n[1][0]);                                                                                // Analytic discrete solution
 }
 
 void init2() {                                       // Initializing Eq. Dists
