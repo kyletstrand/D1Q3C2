@@ -1,0 +1,30 @@
+/****************************************************************/
+/*        Isothermal D1Q3 Lattice Boltzmann Simulation          */
+/*                    Two Component System                      */
+/*            Kyle Strand:  kyle.t.strand@ndsu.edu              */
+/*               North Dakota State University                  */
+/*                     7 December 2015                          */
+/****************************************************************/
+
+THIS IS AN IMPLEMENTATION OF A LATTICE BOLTZMANN ALGORITHM FOR A TWO COMPONENT FLUID
+IN WHICH THE TWO COMPONENTS ARE COUPLED THROUGH A FORCING COEFFICIENT. CURRENTLY, 
+THERE ARE TWO INITIALIZATION ROUTINES. 
+
+1) SINUSOIDAL DENSITY PROFILES
+2) CONSTANT VELOCITIES: MAKING THE VELOCITY AS A FUNCTION OF TIME ONLY.
+
+YOU CAN ALSO CALCULATE THEORETICAL VALUES FROM DECLARED INITIAL CONDITIONS. AT THE 
+MOMENT, YOU CAN CALCULATE THEORETICAL VALUES OF
+
+1) CONTINUOUS ANALYTIC SOLUTION
+2) DISCRETE ANALYTIC SOLUTION
+3) FINITE DIFFERENCE APPROXIMATION
+
+IN ORDER TO ACCESS THESE, UNCOMMENT EACH FILE AND RECOMPILE
+
+THIS CODE REQUIRES ALEXANDER WAGNER'S GRAPH LIBRARY. THIS LIBRARY CAN BE DOWNLOADED
+AT https://www.ndsu.edu/physics/people/faculty/wagner/graphics_library/documentation/
+
+ANY COMMENTS, CONCERNS, OR SUGGESTIONS ARE WELCOME!
+
+THANKS!
